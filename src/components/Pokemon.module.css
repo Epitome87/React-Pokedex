@@ -1,0 +1,460 @@
+/***** Pokemon Card styling *****/
+
+.Pokemon {
+  position: relative;
+  min-width: 160px;
+  width: 160px;
+
+  height: 250px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 15px;
+  text-align: center;
+
+  transition: transform 0.4s ease-in;
+}
+
+.Pokemon__card-face {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  /* Remove background if rather perfect-color-code the card-face*/
+  background: rgba(42, 43, 47, 1);
+  border-radius: 15px;
+  border: 2px solid #1e1f23;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+  transition-delay: 1.25s;
+  z-index: 1;
+
+  height: auto;
+  margin: 0 auto;
+  padding: 1px;
+  width: 90%;
+  top: 3%;
+  left: 1%;
+  right: 1%;
+  bottom: 3%;
+}
+
+.Pokemon__content {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0px;
+}
+/*
+.Pokemon:hover .card-face {
+  transform: translateY(-75px);
+  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+} */
+
+.active {
+  transform: translateY(-75px);
+  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
+  z-index: 100;
+}
+
+.checkbox-label {
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /*  WHY WONT IT FUCKING CENTER */
+  top: 0px;
+  left: -12px;
+  margin: 0px auto;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+/*  When the checkbox is checked, add a blue background */
+.checkbox-label:nth-child(1) .checkmark {
+  background-color: rgba(255, 4, 97, 0.15);
+}
+.checkbox-label:nth-child(2) .checkmark {
+  background-color: rgba(33, 150, 243, 0.15);
+}
+.checkbox-label:nth-child(3) .checkmark {
+  background-color: rgba(50, 219, 92, 0.15);
+}
+
+/*  Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/*  Show the checkmark when checked */
+.checkbox-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-label .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-label-:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-label:nth-child(1) input:checked ~ .checkmark {
+  background-color: #ff0461;
+}
+.checkbox-label:nth-child(2) input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+.checkbox-label:nth-child(3) input:checked ~ .checkmark {
+  background-color: #32db5c;
+}
+
+.Pokemon .hidden-text .perfectCount {
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: white;
+  border-radius: 10px;
+  padding: 3px 3px;
+
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 75%;
+}
+
+.Pokemon .hidden-text .levels {
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: white;
+  border-radius: 10px;
+  padding: 3px 3px;
+
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 75%;
+}
+
+.Pokemon .hidden-text .icon {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+
+  z-index: 0;
+
+  /*  I want to hide this for now. */
+  visibility: hidden;
+}
+
+.Pokemon .hidden-text .icon img {
+  height: 70%;
+  width: 70%;
+  margin: 15%;
+
+  /*  I want to hide this for now. */
+  /* visibility: hidden; */
+}
+
+.Pokemon .hidden-text .icon:hover {
+  filter: saturate(200%);
+  /* Why's this one require translating to keep center? */
+  transform: scale(2) translate(-25%, -25%);
+  cursor: pointer;
+}
+
+.card-face .icon {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  margin: auto;
+
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  visibility: hidden;
+}
+
+.Pokemon__card-face .icon:hover {
+  filter: saturate(200%);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.Pokemon__card-face .icon img {
+  height: 70%;
+  width: 70%;
+  margin: 15%;
+}
+
+.pokemon-plain {
+  background-color: #2a2b2f;
+}
+
+.pokemon-perfect {
+  background-color: rgba(255, 4, 97, 0.9);
+}
+
+.pokemon-lucky {
+  background-color: rgba(43, 210, 255, 0.9);
+}
+
+.pokemon-shiny {
+  background-color: rgba(50, 219, 92, 0.9);
+}
+
+.pokemon-astonishing {
+  background-color: rgba(255, 215, 0, 0.9);
+  border-radius: 15px;
+}
+
+.Pokemon__img-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+
+  /* TESTING RELATIVE SIZING */
+  /* position: relative;
+  top: 10%;
+  width: 90%;
+  height: 60%;
+  margin: 0 auto; */
+  width: 90%;
+}
+
+.Pokemon__img-container img {
+  margin-top: 10%;
+
+  /* TESTING RELATIVE SIZING */
+  height: auto;
+  margin: 0 auto;
+  padding: 5px;
+  width: 90%;
+  position: relative;
+
+  /* visibility: hidden; */
+}
+
+.Pokemon__info {
+  margin-top: 20px;
+
+  /* TESTING RELATIVE SIZING */
+  /* height: 20%;
+  margin: 0 auto;
+  padding: 5px;
+  width: 80%;
+  left: 1.25%;
+  bottom: 2%; */
+  /* position: absolute; */
+
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 3px 3px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+  margin-top: 20px;
+  width: 80%;
+}
+
+.Pokemon__info__number {
+  color: white;
+  padding: 3px 3px;
+  font-size: 0.75em;
+
+  /* TESTING RELATIVE SIZING */
+  /* height: 25%;
+  padding: 1%;
+  width: 90%;
+  left: 0;
+  top: 10%;
+  position: absolute;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+
+.Pokemon__info__name {
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: white;
+  padding: 3px 3px;
+
+  /* TESTING RELATIVE SIZING */
+  /* height: 25%;
+  padding: 1%;
+  width: 90%;
+  margin: 0 auto;
+  bottom: 10%;
+  position: absolute;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.Pokemon__info__type {
+  text-transform: capitalize;
+}
+
+.bug {
+  background: #92bc2c;
+  box-shadow: 0 0 20px #92bc2c;
+}
+
+.dark {
+  background: #595761;
+  box-shadow: 0 0 20px #595761;
+}
+
+.dragon {
+  background: #0c69c8;
+  box-shadow: 0 0 20px #0c69c8;
+}
+
+.electric {
+  background: #f2d94e;
+  box-shadow: 0 0 20px #f2d94e;
+}
+
+.fire {
+  background: #fba54c;
+  box-shadow: 0 0 20px #fba54c;
+}
+
+.fairy {
+  background: #ee90e6;
+  box-shadow: 0 0 20px #ee90e6;
+}
+
+.fighting {
+  background: #d3425f;
+  box-shadow: 0 0 20px #d3425f;
+}
+
+.flying {
+  background: #a1bbec;
+  box-shadow: 0 0 20px #a1bbec;
+}
+
+.ghost {
+  background: #5f6dbc;
+  box-shadow: 0 0 20px #5f6dbc;
+}
+
+.grass {
+  background: #5fbd58;
+  box-shadow: 0 0 20px #5fbd58;
+}
+
+.ground {
+  background: #da7c4d;
+  box-shadow: 0 0 20px #da7c4d;
+}
+
+.ice {
+  background: #75d0c1;
+  box-shadow: 0 0 20px #75d0c1;
+}
+
+.normal {
+  background: #a0a29f;
+  box-shadow: 0 0 20px #a0a29f;
+}
+
+.poison {
+  background: #b763cf;
+  box-shadow: 0 0 20px #b763cf;
+}
+
+.psychic {
+  background: #fa8581;
+  box-shadow: 0 0 20px #fa8581;
+}
+
+.rock {
+  background: #c9bb8a;
+  box-shadow: 0 0 20px #c9bb8a;
+}
+
+.steel {
+  background: #5695a3;
+  box-shadow: 0 0 20px #5695a3;
+}
+
+.water {
+  background: #539ddf;
+  box-shadow: 0 0 20px #539ddf;
+}

@@ -1,0 +1,22 @@
+/* Pokemon Colors
+#fcc916
+#2671b9
+#76d2ea
+#ee8301
+#f9dce1
+#664596
+#cc0000
+*/
+
+.ProfilePage {
+  /* height: 92.5vh; */
+  /* 100% of Page component */
+  min-height: 100%;
+  font-size: 4rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #664596;
+}

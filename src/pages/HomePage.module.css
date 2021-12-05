@@ -1,0 +1,163 @@
+/* Pokemon Colors
+#fcc916
+#2671b9
+#76d2ea
+#ee8301
+#f9dce1
+#664596
+#cc0000
+*/
+
+.Header {
+  font-family: 'Pokemon';
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 3rem;
+}
+
+article > header {
+  font-family: 'Pokemon02';
+  text-align: center;
+}
+
+.HomePage {
+  /* height: 92.5vh; */
+  /* 100% of Page component */
+  /* min-height: 100%; */
+  font-size: 4rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #664596; */
+  background: linear-gradient(to top right, #664596, #0e0914);
+}
+
+.HomePage__Hero {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+  padding: 1rem;
+
+  width: 100vw;
+  /* position: relative;
+  align-items: center;
+  min-height: 400px;
+  padding: 100px 20vw; */
+}
+
+.HomePage__Header {
+  font-family: 'Poppins';
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.HomePage__Header h1 {
+  font-size: 4rem;
+}
+
+.HomePage__Header h2 {
+  font-size: 2rem;
+}
+
+.HomePage__Illustration {
+  color: blue;
+  width: 300px;
+  border-radius: 20%;
+}
+
+.Collection,
+.Leaderboards {
+  width: 90%;
+  font-family: 'Poppins';
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 2rem;
+
+  width: 100vw;
+  position: relative;
+}
+
+/* .Collection {
+  background-color: pink;
+  top: 180px;
+  min-height: 50vh;
+} */
+
+.Collection__Items,
+.LeaderBoards__Items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.Collection__Perfects,
+.Collection__Luckies,
+.Collection__Shinies {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 500px;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* .Leaderboards {
+  font-family: 'Poppins';
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 2rem;
+} */
+
+/* .LeaderBoards__Items {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: space-between;
+  justify-content: space-between;
+} */
+
+.Leaderboards__Global,
+.Leaderboards__Friends {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 500px;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.test {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  /* fill: #ffffff; */
+  fill: pink;
+}
+
+.test2 {
+  position: absolute;
+  top: 185px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  fill: #ffffff;
+}

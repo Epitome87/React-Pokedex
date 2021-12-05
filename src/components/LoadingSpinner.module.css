@@ -1,0 +1,25 @@
+.LoadingSpinner {
+  width: 100%;
+  /* background: url('https://gfycat.com/defenselesspoisedarizonaalligatorlizard')
+    no-repeat center center fixed;
+  background-size: cover !important; */
+
+  background-color: #181b1d !important;
+  font-size: 5rem !important;
+  font-family: Pokemon !important;
+  letter-spacing: 1rem;
+
+  color: white !important;
+
+}
+
+.LoadingSpinner p {
+  background: -webkit-linear-gradient(white, white) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  position: relative !important;
+}
+
+.LoadingSpinner img {
+  margin: 2rem auto !important;
+}

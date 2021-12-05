@@ -1,0 +1,54 @@
+/* Pokemon Colors
+#fcc916
+#2671b9
+#76d2ea
+#ee8301
+#f9dce1
+#664596
+#cc0000
+*/
+
+.Header {
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.Navbar {
+}
+
+.Navbar__Logo {
+  font-size: 3rem;
+  color: white;
+  padding: 1rem;
+}
+
+.Navbar__Links {
+  display: flex;
+  gap: 3rem;
+}
+
+.Navbar__Link {
+  list-style: none;
+  padding: 1rem;
+}
+
+.Navbar__NavLink {
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+}
+
+.active:hover,
+.Navbar__NavLink:hover {
+  color: #f9dce1;
+}
+
+.active {
+  font-size: 3rem;
+  color: white;
+  text-decoration: underline;
+}
